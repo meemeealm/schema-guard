@@ -49,5 +49,6 @@
 - Tests exist for extractor, connector, comparator, and CLI.
 - CLI `schema-guard check` is implemented with human-readable output and exit codes.
 - Schema normalization is implemented with deterministic table/column canonicalization.
+- Comparator and normalization tests are being maintained in `pytest` style.
 - `memory/memory.md` should be read before making further changes.
 - `memory/roadmap.md` is the active short progress log for implementation work.
