@@ -1,0 +1,2 @@
+[console_scripts]
+schema-guard = schema_guard.cli:main
