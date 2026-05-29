@@ -17,6 +17,7 @@ def cli() -> None:
 
 @app.command()
 def check(
+    # temp change ... to None to make optional 
     source: Path = typer.Option(..., exists=True, dir_okay=False, readable=True, help="CSV source file."),
     duckdb: Path = typer.Option(..., exists=True, dir_okay=False, readable=True, help="DuckDB database file."),
     table: str = typer.Option(..., help="Target DuckDB table."),
@@ -35,7 +36,7 @@ def format_report(report: DriftReport) -> str:
         f"Source table: {report.source_table}",
         f"Target table: {report.target_table}",
         f"Severity: {report.severity}",
-        f"Missing columns: {format_list(report.missing_columns)}",
+        f"Missing columns in {report.target_table} table: {format_list(report.missing_columns)}",
         f"Extra columns: {format_list(report.extra_columns)}",
         f"Type mismatches: {format_list(report.type_mismatches)}",
     ]
