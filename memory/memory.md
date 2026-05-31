@@ -50,5 +50,6 @@
 - CLI `schema-guard check` is implemented with human-readable output and exit codes.
 - Schema normalization is implemented with deterministic table/column canonicalization.
 - Comparator and normalization tests are being maintained in `pytest` style.
+- README now documents the project structure, workflow, and architecture rules.
 - `memory/memory.md` should be read before making further changes.
 - `memory/roadmap.md` is the active short progress log for implementation work.
